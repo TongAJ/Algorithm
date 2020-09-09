@@ -31,11 +31,11 @@ public class MyInsertSort {
             // 如果下标没有越界，并且无需队列的第一位比有序队列的倒排第i位小
             while (index >= 0 && arr[index] > value) {
                 // 赋值无需队列
-                arr[index+1] = arr[index];
+                arr[index + 1] = arr[index];
                 index--;
             }
-            if(arr[index+1] != value){
-                arr[index+1] = value;
+            if (arr[index + 1] != value) {
+                arr[index + 1] = value;
             }
         }
 

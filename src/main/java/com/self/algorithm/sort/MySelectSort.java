@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class MySelectSort {
 
     public static void main(String[] args) {
-        int[] arr = {3,1,5,2,7,4,6};
+        int[] arr = {3, 1, 5, 2, 7, 4, 6};
         System.out.println(Arrays.toString(sort(arr)));
     }
 
