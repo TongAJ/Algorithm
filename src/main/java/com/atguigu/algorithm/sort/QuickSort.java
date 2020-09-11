@@ -1,5 +1,7 @@
 package com.atguigu.algorithm.sort;
 
+import com.atguigu.algorithm.uitl.Util;
+
 import java.util.Arrays;
 
 /**
@@ -9,12 +11,11 @@ import java.util.Arrays;
  * @author tongaijie-9697
  * @create 2020-09-08 10:09
  */
-public class QuickSort {
+public class QuickSort implements MySort{
 
     public static void main(String[] args) {
-        int[] arr = {3,1,1,1,2};
-
-        System.out.println(Arrays.toString(quickSort(arr,0,arr.length-1)));
+        int[] result = Util.testTimeCost(100000, new QuickSort());
+        System.out.println(Arrays.toString(result));
     }
 
     /**
@@ -80,5 +81,10 @@ public class QuickSort {
         }
 
         return arr;
+    }
+
+    @Override
+    public int[] sort(int[] arr) {
+        return quickSort(arr,0,arr.length-1);
     }
 }

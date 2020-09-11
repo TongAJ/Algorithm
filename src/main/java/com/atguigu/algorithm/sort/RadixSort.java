@@ -1,5 +1,7 @@
 package com.atguigu.algorithm.sort;
 
+import com.atguigu.algorithm.uitl.Util;
+
 import java.util.Arrays;
 
 /**
@@ -9,16 +11,16 @@ import java.util.Arrays;
  * @author tongaijie-9697
  * @create 2020-09-10 16:51
  */
-public class RadixSort{
+public class RadixSort implements MySort{
 
     public static void main(String[] args) {
-        int[] arr = {93,35,2,17,46};
-        System.out.println(Arrays.toString(sort(arr)));
+        int[] result = Util.testTimeCost(100000, new RadixSort());
+        System.out.println(Arrays.toString(result));
 
     }
 
-
-    public static int[] sort(int[] arr) {
+    @Override
+    public int[] sort(int[] arr) {
         // 因为无法确认每一个桶中有多少个数字，所以保证每个桶可以存放源数组中所有的数据
         int[][] radix = new int[10][arr.length];
         // 类似稀疏数组，index表示第index个桶，表示每个桶中有多少数字
