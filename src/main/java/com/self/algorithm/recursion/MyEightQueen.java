@@ -33,23 +33,34 @@ public class MyEightQueen {
      */
     public static boolean isConflict(int x, int[] queensArr) {
         for (int i = 0; i < x ; i++) {
-            // 是否在同一行或者同一斜线上
+            // 是否在同一行，即数组中的值是否相同
+            // 是否在同一斜线上，即横坐标差值和纵坐标插值1：1，即相等
             if (queensArr[i] == queensArr[x] || Math.abs(x-i)==Math.abs(queensArr[x]-queensArr[i])) {
+                // 冲突
                 return true;
             }
         }
+        // 不冲突
         return false;
     }
 
-
+    /**
+     * 放置皇后
+     * @param spot 第几个皇后
+     */
     public static void setQueens(int spot) {
+        // 如果已经放了8个，则不继续执行
         if(count>MAX_LENGTH){
             return;
         }else{
             for (int i = 0; i < MAX_LENGTH; i++) {
+                // 第几个皇后放在第i个位置
                 queensArr[spot] = i;
+                // 放置之后进行冲突验证
                 if(!isConflict(spot,queensArr)){
+                    // 不冲突，则count++
                     count++;
+                    // 放置下一个
                     setQueens(spot+1);
                 }
             }
