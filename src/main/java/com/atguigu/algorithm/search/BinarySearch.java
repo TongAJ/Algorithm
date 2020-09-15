@@ -29,15 +29,21 @@ public class BinarySearch {
      * @return 匹配下标结果列表
      */
     public static List<Integer> search(int left, int right, int[] arr, int findValue) {
+        // 如果左侧指针大于右侧，直接返回
         if (left > right) {
             return new ArrayList<>();
         } else {
             List<Integer> resultList = new ArrayList<>();
+            // 找到二分位置
             int midIndex = (left + right) / 2;
+            // 和对应的值
             int midValue = arr[midIndex];
+            // 如果被查找数>二分值
             if (findValue > midValue) {
+                // 继续进行右侧二分查找，直到找到findValue
                 return search(midIndex + 1, right, arr, findValue);
             } else if (findValue < midValue) {
+                // 继续进行左侧二分查找，直到找到findValue
                 return search(left, midIndex, arr, findValue);
             } else {
                 // 处理有重复的findValue情况
