@@ -10,6 +10,6 @@ package com.atguigu.algorithm.search;
 public class FibonacciSearch {
 
     public static void main(String[] args) {
-
+        System.out.println("test merge");
     }
 }
