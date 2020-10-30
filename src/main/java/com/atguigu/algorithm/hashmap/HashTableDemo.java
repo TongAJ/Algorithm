@@ -20,7 +20,8 @@ public class HashTableDemo {
         hashTbl.add(employee2);
         hashTbl.list();
 
-        hashTbl.findEmployeeById(13);
+        Employee employee13 = hashTbl.findEmployeeById(13);
+        System.out.println(employee13);
         hashTbl.findEmployeeById(7);
         hashTbl.findEmployeeById(6);
     }
@@ -82,27 +83,6 @@ class EmpLinkedList {
         }
     }
 
-    /**
-     * Description: 移除元素
-     * Param: [employee]
-     * return: void
-     * Author: tongaijie
-     * Date: 2020/10/28
-     */
-    public void remove(Employee employee) {
-        if (head == null) {
-            return;
-        }
-        Employee current = head;
-        while (true) {
-            if (current.next.id.equals(employee.id)) {
-                // 找到最后一个
-                current.next = null;
-                break;
-            }
-            current = current.next;
-        }
-    }
 
     /**
      * Description: 展示链表里的元素
@@ -135,8 +115,8 @@ class EmpLinkedList {
      * Author: tongaijie
      * Date: 2020/10/28
      */
-    public Map<String,Object> findEmployeeById(Integer id) {
-        Map<String,Object> result = new HashMap<>();
+    public Map<String, Object> findEmployeeById(Integer id) {
+        Map<String, Object> result = new HashMap<>(16);
         // 记录第几个节点
         int count = 0;
         if (head == null) {
@@ -151,19 +131,19 @@ class EmpLinkedList {
                 break;
             }
             // 已经到最后一个节点，但仍未找到
-            if(current.next == null && !current.id.equals(id)){
+            if (current.next == null) {
                 break;
             }
             // 寻找
             current = current.next;
             count++;
         }
-        
-        if(employee != null){
-            result.put("count",count);
-            result.put("employee",employee);
+
+        if (employee != null) {
+            result.put("count", count);
+            result.put("employee", employee);
         }
-        
+
         return result;
     }
 }
@@ -237,12 +217,12 @@ class HashTbl {
         int num = hash(id);
         Map<String, Object> result = empLinkedListArray[num].findEmployeeById(id);
         if (result == null) {
-            System.out.println("并没有找到id为"+id+"对应的节点");
+            System.out.println("并没有找到id为" + id + "对应的节点");
             return null;
         } else {
-            int count = (Integer)result.get("count");
+            int count = (Integer) result.get("count");
             Employee employee = (Employee) result.get("employee");
-            System.out.println("第"+num+"条链表中的第"+count+"个元素："+employee);
+            System.out.println("第" + num + "条链表中的第" + count + "个元素：" + employee);
             return employee;
         }
     }
