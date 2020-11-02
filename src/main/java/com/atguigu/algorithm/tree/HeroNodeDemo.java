@@ -16,16 +16,17 @@ public class HeroNodeDemo {
         HeroNode heroNode3 = new HeroNode(3, "3");
         HeroNode heroNode4 = new HeroNode(4, "4");
         HeroNode heroNode5 = new HeroNode(5, "5");
-        HeroNode heroNode6 = new HeroNode(6, "6");
 
-        heroNode2.setLeft(heroNode1);
-        heroNode2.setRight(heroNode3);
+        heroNode1.setLeft(heroNode2);
+        heroNode1.setRight(heroNode3);
+        heroNode3.setLeft(heroNode5);
         heroNode3.setRight(heroNode4);
-        heroNode4.setRight(heroNode5);
-        heroNode5.setRight(heroNode6);
 
-        HeroNodeTree heroNodeTree = new HeroNodeTree(heroNode2);
+        HeroNodeTree heroNodeTree = new HeroNodeTree(heroNode1);
         heroNodeTree.prefix();
+        heroNodeTree.mid();
+        heroNodeTree.suffix();
+
 
     }
 
@@ -88,35 +89,35 @@ class HeroNode{
 
     /**
     * Description: 前序，先输出根节点，然后左子树，最后右子树
-    * Param: [heroNode]
+    * Param:
     * return: void
     * Author: tongaijie
     * Date: 2020/11/2
     */
-    public void prefix(HeroNode heroNode){
-        System.out.println(heroNode);
-        if(heroNode.getLeft() != null){
-            this.prefix(heroNode.getLeft());
+    public void prefix(){
+        System.out.println(this);
+        if(this.getLeft() != null){
+            this.getLeft().prefix();
         }
-        if(heroNode.getRight() != null){
-            this.prefix(heroNode.getRight());
+        if(this.getRight() != null){
+            this.getRight().prefix();
         }
     }
 
     /**
     * Description: 中序，先输出左子树，然后根节点，最后右子树
-    * Param: [heroNode]
+    * Param:
     * return: void
     * Author: tongaijie
     * Date: 2020/11/2
     */
-    public void preMid(HeroNode heroNode){
-        if(heroNode.getLeft() != null){
-            this.preMid(heroNode.getLeft());
+    public void mid(){
+        if(this.getLeft() != null){
+            this.getLeft().mid();
         }
-        System.out.println(heroNode);
-        if(heroNode.getRight() != null){
-            this.preMid(heroNode.getRight());
+        System.out.println(this);
+        if(this.getRight() != null){
+            this.getRight().mid();
         }
     }
 
@@ -127,14 +128,14 @@ class HeroNode{
     * Author: tongaijie
     * Date: 2020/11/2
     */
-    public void suffix(HeroNode heroNode){
-        if(heroNode.getLeft() != null){
-            this.suffix(heroNode.getLeft());
+    public void suffix(){
+        if(this.getLeft() != null){
+            this.getLeft().suffix();
         }
-        if(heroNode.getRight() != null){
-            this.suffix(heroNode.getRight());
+        if(this.getRight() != null){
+            this.getRight().suffix();
         }
-        System.out.println(heroNode);
+        System.out.println(this);
     }
 
     // 三种遍历方式，前中后就是根节点的打印顺序
@@ -148,8 +149,52 @@ class HeroNodeTree{
         this.root = root;
     }
 
+    /**
+    * Description: 二叉树前序遍历
+    * Param: []
+    * return: void
+    * Author: tongaijie
+    * Date: 2020/11/2
+    */
     public void prefix(){
-        root.prefix(root);
+        System.out.println("二叉树前序遍历");
+        if(root != null){
+            root.prefix();
+        } else{
+            System.out.println("二叉树根节点不能为空");
+        }
+    }
+
+    /**
+    * Description: 二叉树中序遍历
+    * Param: []
+    * return: void
+    * Author: tongaijie
+    * Date: 2020/11/2
+    */
+    public void mid(){
+        System.out.println("二叉树中序遍历");
+        if(root != null){
+            root.mid();
+        } else{
+            System.out.println("二叉树根节点不能为空");
+        }
+    }
+
+    /**
+    * Description: 二叉树后序遍历
+    * Param: []
+    * return: void
+    * Author: tongaijie
+    * Date: 2020/11/2
+    */
+    public void suffix(){
+        System.out.println("二叉树后序遍历");
+        if(root != null){
+            root.suffix();
+        } else{
+            System.out.println("二叉树根节点不能为空");
+        }
     }
 
 }
