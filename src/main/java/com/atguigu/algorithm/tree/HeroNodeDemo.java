@@ -86,6 +86,8 @@ class HeroNode{
         this.id = id;
         this.name = name;
     }
+    
+    // 三种遍历方式，前中后就是根节点的打印顺序
 
     /**
     * Description: 前序，先输出根节点，然后左子树，最后右子树
@@ -138,7 +140,47 @@ class HeroNode{
         System.out.println(this);
     }
 
-    // 三种遍历方式，前中后就是根节点的打印顺序
+    /**
+    *
+    * Description: 根据id进行节点的前序搜索
+    * @author tongaijie
+    * Param [id]
+    * Return com.atguigu.algorithm.tree.HeroNode
+    * Date 2020/11/2
+    */    
+    public HeroNode prefixSearch(Integer id){
+        if(this.getId() == id){
+            return this;
+        } else {
+            if( this.getLeft() != null){
+                return  this.getLeft().prefixSearch(id);
+            } else if ( this.getRight() != null){
+                return  this.getRight().prefixSearch(id);
+            }
+        }
+        return null;
+    }
+
+    /**
+    *
+    * Description: 根据id进行节点的中序搜索
+    * @author tongaijie
+    * Param [id]
+    * Return com.atguigu.algorithm.tree.HeroNode
+    * Date 2020/11/2
+    */
+    public HeroNode midSearch(Integer id){
+        if(this.getId() == id){
+            return this;
+        } else {
+            if( this.getLeft() != null){
+                return  this.getLeft().midSearch(id);
+            } else if ( this.getRight() != null){
+                return  this.getRight().midSearch(id);
+            }
+        }
+        return null;
+    }
 }
 
 class HeroNodeTree{
@@ -196,5 +238,6 @@ class HeroNodeTree{
             System.out.println("二叉树根节点不能为空");
         }
     }
+
 
 }
