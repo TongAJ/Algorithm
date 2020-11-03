@@ -20,9 +20,11 @@ public class HeroNodeDemo {
         HeroNode heroNode3 = new HeroNode(3, "3");
         HeroNode heroNode4 = new HeroNode(4, "4");
         HeroNode heroNode5 = new HeroNode(5, "5");
+        HeroNode heroNode6 = new HeroNode(6, "6");
 
         heroNode1.setLeft(heroNode2);
         heroNode1.setRight(heroNode3);
+        heroNode2.setRight(heroNode6);
         heroNode3.setLeft(heroNode5);
         heroNode3.setRight(heroNode4);
 
@@ -45,8 +47,17 @@ public class HeroNodeDemo {
         System.out.println();
 
 
-        heroNodeTree.removeNode(2);
+/*        heroNodeTree.removeNode(2);
         heroNodeTree.removeNode(4);
+        if (heroNodeTree.getRoot() != null) {
+            heroNodeTree.prefix();
+        } else {
+            System.out.println("该二叉树已经为空树");
+        }
+        System.out.println();*/
+
+        heroNodeTree.removeInRule(2);
+        heroNodeTree.removeInRule(3);
         if (heroNodeTree.getRoot() != null) {
             heroNodeTree.prefix();
         } else {
@@ -267,7 +278,64 @@ class HeroNode {
             // 不为空则向右侧进行递归删除
             this.getRight().removeNode(id);
         }
+    }
 
+    /**
+     * Description: 根据一定的规则进行节点的删除，
+     * 当删除节点为非叶子节点时，
+     * 如果只有一个子节点，则使用该子节点替换被删除节点
+     * 如果左、右子节点都有值。则使用左子节点替代该被删除的节点
+     * Param: [heroNode]
+     * return: void
+     * Author: tongaijie
+     * Date: 2020/11/3
+     */
+    public void removeInRule(Integer id) {
+        // 当左子节点匹配时
+        if (this.getLeft() != null && this.getLeft().getId().equals(id)) {
+            //  判断该节点下是一个节点还是有两个节点
+            //  1:有两个节点时
+            if (this.getLeft().getLeft() != null && this.getLeft().getRight() != null) {
+                // 先将匹配节点的右子节点配置到匹配节点的左子节点下
+                this.getLeft().getLeft().setLeft(this.getLeft().getRight());
+                // 用匹配节点的左子节点替代自己
+                this.setLeft(this.getLeft().getLeft());
+            } else {
+                // 匹配的节点的左子节点不为空，也同时表示匹配节点的右子节点为空
+                if (this.getLeft().getLeft() != null) {
+                    this.setLeft(this.getLeft().getLeft());
+                } else if (this.getLeft().getRight() != null) {
+                    this.setLeft(this.getLeft().getRight());
+                }
+            }
+        }
+        // 当右子节点匹配时
+        if (this.getRight() != null && this.getRight().getId().equals(id)) {
+            // 同上逻辑
+            //  判断该节点下是一个节点还是有两个节点
+            //  1:有两个节点时
+            if (this.getRight().getLeft() != null && this.getRight().getRight() != null) {
+                // 先将匹配节点的右子节点配置到匹配节点的左子节点下
+                this.getRight().getLeft().setLeft(this.getRight().getRight());
+                // 用匹配节点的左子节点替代自己
+                this.setRight(this.getRight().getLeft());
+            } else {
+                // 匹配的节点的左子节点不为空，也同时表示匹配节点的右子节点为空
+                if (this.getRight().getLeft() != null) {
+                    this.setRight(this.getRight().getLeft());
+                } else if (this.getRight().getRight() != null) {
+                    this.setRight(this.getRight().getRight());
+                }
+            }
+        }
+        // 没有匹配到时
+        // 先向左侧进行递归删除
+        if (this.getLeft() != null) {
+            this.getLeft().removeInRule(id);
+        }
+        if (this.getRight() != null) {
+            this.getRight().removeInRule(id);
+        }
     }
 }
 
@@ -276,6 +344,7 @@ class HeroNode {
 class HeroNodeTree {
 
     private HeroNode root;
+
     /**
      * Description: 二叉树前序遍历
      * Param: []
@@ -386,5 +455,21 @@ class HeroNodeTree {
             return;
         }
         root.removeNode(id);
+    }
+
+    /**
+    * Description: 遵守一定的规则，根据id进行二叉树的节点删除
+    * Param: [id]
+    * return: void
+    * Author: tongaijie
+    * Date: 2020/11/3
+    */
+    public void removeInRule(int id) {
+        if (root.getId().equals(id)) {
+            root = null;
+            System.out.println("根节点为空，清除二叉树");
+            return;
+        }
+        root.removeInRule(id);
     }
 }
