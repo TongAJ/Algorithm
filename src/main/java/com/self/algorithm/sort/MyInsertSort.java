@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 自己编写插入算法
  *
  * @author tong-aj
- * @create 2020-09-07 11:09
+ * create 2020-09-07 11:09
  */
 public class MyInsertSort {
 
@@ -19,8 +19,8 @@ public class MyInsertSort {
     /**
      * 使用无序数组的第1位 与有序数组中的倒排进行比对
      *
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
     public static int[] sort(int[] arr) {
         for (int i = 1; i < arr.length; i++) {

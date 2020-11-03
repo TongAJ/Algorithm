@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 自己编写的选择排序法
  *
  * @author tong-aj
- * @create 2020-09-07 10:31
+ * create 2020-09-07 10:31
  */
 public class MySelectSort {
 

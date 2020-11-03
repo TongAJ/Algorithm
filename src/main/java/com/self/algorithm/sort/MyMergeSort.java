@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 自己编写归并排序算法
  *
  * @author tong-aj
- * @create 2020-09-10
+ * create 2020-09-10
  */
 public class MyMergeSort {
 
@@ -16,11 +16,11 @@ public class MyMergeSort {
     }
 
     /**
-     * @param arr
-     * @param left
-     * @param right
-     * @param temp
-     * @return
+     * param arr
+     * param left
+     * param right
+     * param temp
+     * return
      */
     public static int[] divideAndMerge(int[] arr, int left, int right, int[] temp) {
         if (left < right) {
@@ -33,11 +33,11 @@ public class MyMergeSort {
     }
 
     /**
-     * @param arr
-     * @param left
-     * @param mid
-     * @param right
-     * @param temp
+     * param arr
+     * param left
+     * param mid
+     * param right
+     * param temp
      */
     public static void merge(int[] arr, int left, int mid, int right, int[] temp) {
         int indexL = left;

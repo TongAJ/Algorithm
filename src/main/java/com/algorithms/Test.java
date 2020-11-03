@@ -14,9 +14,9 @@ public class Test {
 
     /**
      * 查找两个数之间的最大公约数
-     * @param p 第一个数字
-     * @param q 第二个数字
-     * @return 公约数
+     * param p 第一个数字
+     * param q 第二个数字
+     * return 公约数
      */
     public static int gcd(int p, int q){
         if (q == 0) {

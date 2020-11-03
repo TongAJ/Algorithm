@@ -5,14 +5,14 @@ package com.atguigu.algorithm.queue;
  * 线性数据：队列
  *      初步模拟队列
  *      问题：队列只能一次性
- * @create 2020-05-30 22:32
+ * create 2020-05-30 22:32
  * @author tong-aj
  */
 public class ArrayQueue extends AbstractQueue implements MyQueue{
 
     /**
      * ArrayQueue的构造函数
-     * @param arrayMaxSize
+     * param arrayMaxSize
      */
     public ArrayQueue(int arrayMaxSize){
         this.setMaxSize(arrayMaxSize);
@@ -23,7 +23,7 @@ public class ArrayQueue extends AbstractQueue implements MyQueue{
 
     /**
      * 判断是否位空
-     * @return
+     * return
      */
     @Override
     public boolean isEmpty(){
@@ -40,7 +40,7 @@ public class ArrayQueue extends AbstractQueue implements MyQueue{
 
     /**
      * 添加数据
-     * @param element
+     * param element
      */
     @Override
     public void addElement(int element){
@@ -54,7 +54,7 @@ public class ArrayQueue extends AbstractQueue implements MyQueue{
 
     /**
      * 取出数据
-     * @return
+     * return
      */
     @Override
     public int getElement(){
@@ -68,7 +68,7 @@ public class ArrayQueue extends AbstractQueue implements MyQueue{
 
     /**
      * 获得头指针数据
-      * @return
+      * return
      */
     @Override
     public int getFrontElement(){

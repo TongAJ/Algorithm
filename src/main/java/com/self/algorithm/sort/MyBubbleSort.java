@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 自己编写冒泡算法
  *
  * @author tong-aj
- * @create 2020-09-07 10:24
+ * create 2020-09-07 10:24
  */
 public class MyBubbleSort {
 
@@ -19,8 +19,8 @@ public class MyBubbleSort {
     /**
      * 对给定的数组进行冒泡排序
      *
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
     public static int[] sort(int[] arr) {
         for (int i = 0; i < arr.length - 1; i++) {

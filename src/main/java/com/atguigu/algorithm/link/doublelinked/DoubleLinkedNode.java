@@ -4,7 +4,7 @@ package com.atguigu.algorithm.link.doublelinked;
  * 描述:
  * 节点
  *
- * @create 2020-06-01 11:55
+ * create 2020-06-01 11:55
  * @author tong-aj
  */
 public class DoubleLinkedNode {

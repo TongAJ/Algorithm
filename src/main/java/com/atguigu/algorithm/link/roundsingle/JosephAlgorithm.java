@@ -5,7 +5,7 @@ package com.atguigu.algorithm.link.roundsingle;
  * 使用环形单向链表 解决 ：约瑟夫算法
  *
  * @author tong-aj
- * @create 2020-07-21 9:20
+ * create 2020-07-21 9:20
  */
 public class JosephAlgorithm {
 
@@ -17,7 +17,7 @@ public class JosephAlgorithm {
     /**
      * 添加指定数量的环形单向链表
      *
-     * @param number
+     * param number
      */
     private static void add(int number) {
         RoundLinkedNode next;
@@ -44,9 +44,9 @@ public class JosephAlgorithm {
     /**
      * 根据指定节点个数，起始节点，和轮流数，打印出出队列的节点顺序
      *
-     * @param startAt 起始节点
-     * @param count   轮流数
-     * @param number  节点个数
+     * param startAt 起始节点
+     * param count   轮流数
+     * param number  节点个数
      */
     private static void countAndOut(int startAt, int count, int number) {
         // 添加指定个数的环形单向链表

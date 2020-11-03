@@ -22,11 +22,11 @@ public class BinarySearch {
     /**
      * 二分法查找
      *
-     * @param left      左侧index
-     * @param right     右侧index
-     * @param arr       源数组
-     * @param findValue 被查找数
-     * @return 匹配下标结果列表
+     * param left      左侧index
+     * param right     右侧index
+     * param arr       源数组
+     * param findValue 被查找数
+     * return 匹配下标结果列表
      */
     public static List<Integer> search(int left, int right, int[] arr, int findValue) {
         // 如果左侧指针大于右侧，直接返回

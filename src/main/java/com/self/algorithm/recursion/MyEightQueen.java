@@ -34,8 +34,8 @@ public class MyEightQueen {
     /**
      * 检验当前皇后位置和数组中已放置皇后的所有位置是否在攻击范围内
      *
-     * @param queensArr 皇后稀疏数组
-     * @return 返回是否冲突
+     * param queensArr 皇后稀疏数组
+     * return 返回是否冲突
      */
     public static boolean isConflict(int x, int[] queensArr) {
         for (int i = 0; i < x; i++) {
@@ -53,7 +53,7 @@ public class MyEightQueen {
     /**
      * 放置皇后
      *
-     * @param spot 第几个皇后
+     * param spot 第几个皇后
      */
     public static void setQueens(int spot) {
         // 如果已经放了8个，则不继续执行

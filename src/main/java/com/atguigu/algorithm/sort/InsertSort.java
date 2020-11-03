@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 插入排序法
  *
  * @author tong-aj
- * @create 2020-09-04 9:49
+ * create 2020-09-04 9:49
  */
 public class InsertSort implements MySort{
 
@@ -22,8 +22,8 @@ public class InsertSort implements MySort{
     /**
      * 插入排序法
      *
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
 
     @Override

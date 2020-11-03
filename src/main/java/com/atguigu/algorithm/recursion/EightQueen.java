@@ -5,7 +5,7 @@ package com.atguigu.algorithm.recursion;
  * 使用递归解决八皇后问题
  *
  * @author tong-aj
- * @create 2020-09-01 14:26
+ * create 2020-09-01 14:26
  */
 public class EightQueen {
 
@@ -44,8 +44,8 @@ public class EightQueen {
     /**
      * 判断第 n 个棋子和前面所有的是否有冲突
      *      即：不能处于同一列，也不能再同一斜线上
-     * @param n
-     * @return
+     * param n
+     * return
      */
     public static boolean isConflict(int n){
         for (int i = 0; i < n; i++) {
@@ -64,7 +64,7 @@ public class EightQueen {
 
     /**
      * 将第n个棋子放入棋盘中
-     * @param n
+     * param n
      */
     public static void chess(int n){
         if(n == max){

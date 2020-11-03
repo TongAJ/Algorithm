@@ -5,7 +5,7 @@ package com.atguigu.algorithm.queue;
  * 描述:
  * 队列：环形队列，解决队列可重复问题
  *
- * @create 2020-05-31 16:10
+ * create 2020-05-31 16:10
  * @author tong-aj
  */
 public class CircleQueue extends AbstractQueue implements MyQueue {

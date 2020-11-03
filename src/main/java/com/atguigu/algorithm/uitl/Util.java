@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * 工具类
  *
  * @author tong-aj
- * @create 2020-08-25 21:10
+ * create 2020-08-25 21:10
  */
 public class Util {
 
@@ -20,8 +20,8 @@ public class Util {
     /**
      * 利用正则表达式判断字符串是否是数字
      *
-     * @param str
-     * @return
+     * param str
+     * return
      */
     public static boolean isNumeric(String str) {
         Matcher isNum = NUMBER_PATTERN.matcher(str);

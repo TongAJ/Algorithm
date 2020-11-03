@@ -5,7 +5,7 @@ package com.atguigu.algorithm.link.doublelinked;
  * 双向链表
  *
  * @author tong-aj
- * @create 2020-07-20 11:05
+ * create 2020-07-20 11:05
  */
 public class DoubleLinkedList {
 
@@ -30,7 +30,7 @@ public class DoubleLinkedList {
     /**
      * 新增
      *
-     * @param node
+     * param node
      */
     private void add(DoubleLinkedNode node) {
         if (head.getNext() == null) {
@@ -54,7 +54,7 @@ public class DoubleLinkedList {
     /**
      * 更新
      *
-     * @param node
+     * param node
      */
     private void update(DoubleLinkedNode node) {
         if (head.getNext() == null) {
@@ -80,7 +80,7 @@ public class DoubleLinkedList {
     /**
      * 删除
      *
-     * @param id
+     * param id
      */
     private void delete(int id) {
         if (head.getNext() == null) {

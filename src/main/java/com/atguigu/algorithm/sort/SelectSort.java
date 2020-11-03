@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 选择排序
  *
  * @author tong-aj
- * @create 2020-09-03 15:33
+ * create 2020-09-03 15:33
  */
 public class SelectSort implements MySort{
 
@@ -22,8 +22,8 @@ public class SelectSort implements MySort{
      * 选择排序
      * 第i次找数组中最小的数，与第i位进行位置互换
      *
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
     @Override
     public int[] sort(int[] arr) {

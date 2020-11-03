@@ -8,7 +8,7 @@ import java.util.List;
  * 使用递归解决迷宫问题
  *
  * @author tong-aj
- * @create 2020-08-31 15:23
+ * create 2020-08-31 15:23
  */
 public class Puzzle {
 
@@ -49,7 +49,7 @@ public class Puzzle {
 
     /**
      * 初始化挡板位置
-     * @return
+     * return
      */
     public static List<int[]> initBlocks() {
         List<int[]> blocks = new ArrayList<>();
@@ -74,9 +74,9 @@ public class Puzzle {
     /**
      * 初始化迷宫
      *
-     * @param length
-     * @param weight
-     * @return
+     * param length
+     * param weight
+     * return
      */
     public static int[][] initPuzzle(int length, int weight) {
         puzzle = new int[length][weight];
@@ -98,9 +98,9 @@ public class Puzzle {
     /**
      * 初始化墙和挡板
      *
-     * @param length
-     * @param weight
-     * @param blocks
+     * param length
+     * param weight
+     * param blocks
      */
     public static void setWallAndBlocks(int length, int weight, List<int[]> blocks) {
         // 初始化四周的墙壁
@@ -128,9 +128,9 @@ public class Puzzle {
     /**
      * 从X，Y坐标开始寻找走向终点的路
      *
-     * @param x
-     * @param y
-     * @return
+     * param x
+     * param y
+     * return
      */
     public static boolean findWays(int x, int y) {
         // 如果找到了终点，直接返回

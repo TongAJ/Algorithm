@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 快速排序算法
  *
  * @author tong-aj
- * @create 2020-09-08 10:09
+ * create 2020-09-08 10:09
  */
 public class QuickSort implements MySort{
 
@@ -21,8 +21,8 @@ public class QuickSort implements MySort{
     /**
      * 快速排序算法
      *
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
     public static int[] quickSort(int[] arr, int left, int right) {
         // 左侧下标

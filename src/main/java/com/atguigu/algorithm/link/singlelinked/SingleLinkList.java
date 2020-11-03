@@ -4,7 +4,7 @@ package com.atguigu.algorithm.link.singlelinked;
  * 描述:
  * 单向链表，基本功能
  *
- * @create 2020-05-31 22:05
+ * create 2020-05-31 22:05
  * @author tong-aj
  */
 public class SingleLinkList {
@@ -14,7 +14,7 @@ public class SingleLinkList {
 
     /**
      * 按添加顺序添加节点
-      * @param node
+      * param node
      */
     public void addElement(Node node) {
         // 获取第一个元素
@@ -35,7 +35,7 @@ public class SingleLinkList {
 
     /**
      * 按节点ID顺序添加节点
-      * @param node
+      * param node
      */
     public void addElementByOrder(Node node) {
         // 获取第一个元素

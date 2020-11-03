@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 冒泡算法
  *
  * @author tong-aj
- * @create 2020-09-03 11:21
+ * create 2020-09-03 11:21
  */
 public class BubbleSort implements MySort{
 
@@ -23,8 +23,8 @@ public class BubbleSort implements MySort{
     /**
      * 根据输入的数组，进行冒泡排序，然后输出
      *
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
     @Override
     public int[] sort(int[] arr) {
