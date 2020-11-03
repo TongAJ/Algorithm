@@ -44,6 +44,13 @@ public class HeroNodeDemo {
         System.out.println();
 
 
+        heroNodeTree.removeNode(4);
+        if (heroNodeTree.getRoot() != null) {
+            heroNodeTree.prefix();
+        } else {
+            System.out.println("该二叉树已经为空树");
+        }
+
     }
 
 }
@@ -187,39 +194,39 @@ class HeroNode {
         // 不管找没找到，都返回result
         return result;
     }
-    
+
     /**
-    * Description: 根据id进行后序搜索
-    * Param: [id]
-    * return: com.atguigu.algorithm.tree.HeroNode
-    * Author: tongaijie
-    * Date: 2020/11/3
-    */
-    public HeroNode suffixSearch(Integer id){
+     * Description: 根据id进行后序搜索
+     * Param: [id]
+     * return: com.atguigu.algorithm.tree.HeroNode
+     * Author: tongaijie
+     * Date: 2020/11/3
+     */
+    public HeroNode suffixSearch(Integer id) {
         // 定义变量
         HeroNode result = null;
         // 如果左子树不为空
-        if(this.getLeft()!=null){
+        if (this.getLeft() != null) {
             // 向左进行后序搜索
             result = this.getLeft().suffixSearch(id);
         }
         // 判断变量是否为空
-        if(result!=null){
+        if (result != null) {
             // 找到节点
             return result;
         }
         // 如果右子树不为空
-        if(this.getRight()!=null){
+        if (this.getRight() != null) {
             // 向右进行后序搜索
             result = this.getRight().suffixSearch(id);
         }
         // 如果变量不为空
-        if(result!=null){
+        if (result != null) {
             // 找到节点
             return result;
         }
         // 判断是否匹配
-        if(this.getId().equals(id)){
+        if (this.getId().equals(id)) {
             // 匹配则直接返回
             return this;
         }
@@ -227,8 +234,38 @@ class HeroNode {
         // 都没周到，返回null
         return null;
     }
+
+    /**
+     * Description: 根据id进行删除节点,叶子节点直接删除，非叶子节点，将该节点下的节点全部删除
+     * Param: [id]
+     * return: void
+     * Author: tongaijie
+     * Date: 2020/11/3
+     */
+    public void removeNode(Integer id) {
+        // 如果该节点的左子节点匹配
+        if (this.getLeft() != null && this.getLeft().getId().equals(id)) {
+            // 左子节点删除
+            this.setLeft(null);
+            return;
+        }
+        // 如果节点的右子节点匹配
+        if (this.getRight() != null && this.getRight().getId().equals(id)) {
+            // 右子节点删除
+            this.setRight(null);
+            return;
+        }
+        if (this.getLeft() != null) {
+            this.getLeft().removeNode(id);
+        }
+        if (this.getRight() != null) {
+            this.getRight().removeNode(id);
+        }
+
+    }
 }
 
+@Data
 class HeroNodeTree {
 
     private HeroNode root;
@@ -318,12 +355,12 @@ class HeroNodeTree {
     }
 
     /**
-    * Description: 根据id进行二叉树的后序搜索
-    * Param: [id]
-    * return: com.atguigu.algorithm.tree.HeroNode
-    * Author: tongaijie
-    * Date: 2020/11/3
-    */
+     * Description: 根据id进行二叉树的后序搜索
+     * Param: [id]
+     * return: com.atguigu.algorithm.tree.HeroNode
+     * Author: tongaijie
+     * Date: 2020/11/3
+     */
     public HeroNode suffixSearch(Integer id) {
         // 如果根节点为空，直接返回
         if (root == null) {
@@ -333,4 +370,19 @@ class HeroNodeTree {
         return root.suffixSearch(id);
     }
 
+    /**
+     * Description: 根据id进行二叉树删除对应的节点
+     * Param: [id]
+     * return: void
+     * Author: tongaijie
+     * Date: 2020/11/3
+     */
+    public void removeNode(Integer id) {
+        if (root.getId().equals(id)) {
+            root = null;
+            System.out.println("根节点为空，清除二叉树");
+            return;
+        }
+        root.removeNode(id);
+    }
 }
