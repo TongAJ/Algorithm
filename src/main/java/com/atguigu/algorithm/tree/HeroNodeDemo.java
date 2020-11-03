@@ -255,10 +255,14 @@ class HeroNode {
             this.setRight(null);
             return;
         }
+        // 查找左子节点是否为空
         if (this.getLeft() != null) {
+            // 不为空则向左侧进行递归删除
             this.getLeft().removeNode(id);
         }
+        // 查找右子节点是否为空
         if (this.getRight() != null) {
+            // 不为空则向右侧进行递归删除
             this.getRight().removeNode(id);
         }
 
