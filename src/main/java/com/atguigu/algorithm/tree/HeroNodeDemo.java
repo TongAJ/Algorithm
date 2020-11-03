@@ -7,7 +7,7 @@ import lombok.ToString;
 /**
  * Description: 模拟二叉树
  *
- * @author tongaijie
+ * @author tong-aj
  * <p>
  * Create: 2020-11-02 10:19
  */
@@ -93,7 +93,7 @@ class HeroNode {
      * Description: 前序，先输出根节点，然后左子树，最后右子树
      * Param:
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/2
      */
     public void prefix() {
@@ -110,7 +110,7 @@ class HeroNode {
      * Description: 中序，先输出左子树，然后根节点，最后右子树
      * Param:
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/2
      */
     public void mid() {
@@ -127,7 +127,7 @@ class HeroNode {
      * Description: 后序遍历，先左子树，然后右子树，最后根节点
      * Param: [heroNode]
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/2
      */
     public void suffix() {
@@ -143,7 +143,7 @@ class HeroNode {
     /**
      * Description: 根据id进行节点的前序搜索
      *
-     * @author tongaijie
+     * @author tong-aj
      * Param [id]
      * Return com.atguigu.algorithm.tree.HeroNode
      * Date 2020/11/2
@@ -177,7 +177,7 @@ class HeroNode {
     /**
      * Description: 根据id进行节点的中序搜索
      *
-     * @author tongaijie
+     * @author tong-aj
      * Param [id]
      * Return com.atguigu.algorithm.tree.HeroNode
      * Date 2020/11/2
@@ -212,7 +212,7 @@ class HeroNode {
      * Description: 根据id进行后序搜索
      * Param: [id]
      * return: com.atguigu.algorithm.tree.HeroNode
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/3
      */
     public HeroNode suffixSearch(Integer id) {
@@ -252,7 +252,7 @@ class HeroNode {
      * Description: 根据id进行删除节点,叶子节点直接删除，非叶子节点，将该节点下的节点全部删除
      * Param: [id]
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/3
      */
     public void removeNode(Integer id) {
@@ -287,7 +287,7 @@ class HeroNode {
      * 如果左、右子节点都有值。则使用左子节点替代该被删除的节点
      * Param: [heroNode]
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/3
      */
     public void removeInRule(Integer id) {
@@ -349,7 +349,7 @@ class HeroNodeTree {
      * Description: 二叉树前序遍历
      * Param: []
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/2
      */
     public void prefix() {
@@ -365,7 +365,7 @@ class HeroNodeTree {
      * Description: 二叉树中序遍历
      * Param: []
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/2
      */
     public void mid() {
@@ -381,7 +381,7 @@ class HeroNodeTree {
      * Description: 二叉树后序遍历
      * Param: []
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/2
      */
     public void suffix() {
@@ -397,7 +397,7 @@ class HeroNodeTree {
      * Description: 根据id对二叉树进行前序搜索
      * Param: [id]
      * return: com.atguigu.algorithm.tree.HeroNode
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/3
      */
     public HeroNode prefixSearch(Integer id) {
@@ -413,7 +413,7 @@ class HeroNodeTree {
      * Description: 根据id进行二叉树的中序查询
      * Param: [id]
      * return: com.atguigu.algorithm.tree.HeroNode
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/3
      */
     public HeroNode midSearch(Integer id) {
@@ -429,7 +429,7 @@ class HeroNodeTree {
      * Description: 根据id进行二叉树的后序搜索
      * Param: [id]
      * return: com.atguigu.algorithm.tree.HeroNode
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/3
      */
     public HeroNode suffixSearch(Integer id) {
@@ -445,7 +445,7 @@ class HeroNodeTree {
      * Description: 根据id进行二叉树删除对应的节点
      * Param: [id]
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/11/3
      */
     public void removeNode(Integer id) {
@@ -461,7 +461,7 @@ class HeroNodeTree {
     * Description: 遵守一定的规则，根据id进行二叉树的节点删除
     * Param: [id]
     * return: void
-    * Author: tongaijie
+    * Author: tong-aj
     * Date: 2020/11/3
     */
     public void removeInRule(int id) {

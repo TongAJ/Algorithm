@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 描述:
  * 自己编写的选择排序法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-07 10:31
  */
 public class MySelectSort {

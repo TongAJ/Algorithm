@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Description: 模拟哈希表
  *
- * @author tongaijie
+ * @author tong-aj
  * <p>
  * Create: 2020-10-28 14:53
  */
@@ -63,7 +63,7 @@ class EmpLinkedList {
      * Description: 添加元素
      * Param: [employee]
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     public void add(Employee employee) {
@@ -88,7 +88,7 @@ class EmpLinkedList {
      * Description: 展示链表里的元素
      * Param: []
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     public void list(Integer number) {
@@ -112,7 +112,7 @@ class EmpLinkedList {
      * Description: 根据id寻找对应的节点
      * Param: [num, id]
      * return: com.atguigu.algorithm.hashmap.Employee
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     public Map<String, Object> findEmployeeById(Integer id) {
@@ -166,7 +166,7 @@ class HashTbl {
      * Description: 构造函数
      * Param: [size]
      * return:
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     public HashTbl(Integer size) {
@@ -183,7 +183,7 @@ class HashTbl {
      * Description: 新增节点，通过hash对象的id，判断插入哪个链表
      * Param: [employee]
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     public void add(Employee employee) {
@@ -195,7 +195,7 @@ class HashTbl {
      * Description: 展示整个链表数组中的所有节点
      * Param: []
      * return: void
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     public void list() {
@@ -210,7 +210,7 @@ class HashTbl {
      * Description: 根据id来查找节点
      * Param: [id]
      * return: com.atguigu.algorithm.hashmap.Employee
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     public Employee findEmployeeById(Integer id) {
@@ -231,7 +231,7 @@ class HashTbl {
      * Description: hash最简单的一种实现方式：和一个固定值进行取模
      * Param: [id]
      * return: java.lang.Integer
-     * Author: tongaijie
+     * Author: tong-aj
      * Date: 2020/10/28
      */
     private Integer hash(Integer id) {

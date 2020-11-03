@@ -4,7 +4,7 @@ package com.atguigu.algorithm.recursion;
  * 描述:
  * 使用递归解决八皇后问题
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-01 14:26
  */
 public class EightQueen {

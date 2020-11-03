@@ -6,7 +6,7 @@ package com.atguigu.algorithm.queue;
  *      初步模拟队列
  *      问题：队列只能一次性
  * @create 2020-05-30 22:32
- * @author tongaijie
+ * @author tong-aj
  */
 public class ArrayQueue extends AbstractQueue implements MyQueue{
 

@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 描述:
  * 自己编写冒泡算法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-07 10:24
  */
 public class MyBubbleSort {

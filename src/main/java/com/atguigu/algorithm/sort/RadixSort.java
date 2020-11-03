@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 描述:
  * 基于桶排序的基数排序
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-10 16:51
  */
 public class RadixSort implements MySort{

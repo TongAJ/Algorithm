@@ -8,7 +8,7 @@ import java.util.Arrays;
 /**
  * 描述: 希尔排序算法（交换算法）
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-07 15:32
  */
 public class ShellSort implements MySort {

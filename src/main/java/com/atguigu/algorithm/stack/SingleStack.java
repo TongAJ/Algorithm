@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 描述:
  * 数组模拟栈
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-07-21 14:07
  */
 public class SingleStack {

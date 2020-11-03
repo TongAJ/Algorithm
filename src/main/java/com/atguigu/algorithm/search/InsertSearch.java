@@ -8,7 +8,7 @@ import java.util.List;
  * 描述:
  * 插值查找算法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * 2020-09-15 14:58
  */
 public class InsertSearch {

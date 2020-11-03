@@ -7,7 +7,7 @@ import java.io.*;
  * 稀疏数组
  *
  * @create 2020-05-29 21:57
- * @author tongaijie
+ * @author tong-aj
  */
 public class SparseArray {
 

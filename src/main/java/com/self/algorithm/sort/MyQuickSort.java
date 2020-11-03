@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 描述:
  * 自己编写的快速排序算法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-09 10:01
  */
 public class MyQuickSort {

@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 描述:
  * 归并排序算法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-09 14:04
  */
 public class MergeSort {

@@ -8,7 +8,7 @@ import java.util.List;
  * 描述:
  * 二分法查找
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * 2020-09-14 16:56
  */
 public class BinarySearch {

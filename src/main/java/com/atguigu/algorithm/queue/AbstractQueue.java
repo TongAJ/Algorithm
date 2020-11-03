@@ -7,7 +7,7 @@ import java.util.Scanner;
  * 抽象队列，将一些成员属性抽到公共的抽象类中
  *
  * @create 2020-05-31 16:17
- * @author tongaijie
+ * @author tong-aj
  */
 public class AbstractQueue {
 

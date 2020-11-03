@@ -4,7 +4,7 @@ package com.atguigu.algorithm.link.doublelinked;
  * 描述:
  * 双向链表
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-07-20 11:05
  */
 public class DoubleLinkedList {

@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 描述:
  * 快速排序算法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-08 10:09
  */
 public class QuickSort implements MySort{

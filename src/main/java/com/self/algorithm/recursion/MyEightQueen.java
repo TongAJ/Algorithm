@@ -6,7 +6,7 @@ import java.util.Arrays;
  * 描述:
  * 自己编写八皇后
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * 2020-09-14 10:33
  */
 public class MyEightQueen {

@@ -5,7 +5,7 @@ package com.atguigu.algorithm.link.singlelinked;
  * 单向链表，基本功能
  *
  * @create 2020-05-31 22:05
- * @author tongaijie
+ * @author tong-aj
  */
 public class SingleLinkList {
 

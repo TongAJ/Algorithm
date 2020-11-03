@@ -7,7 +7,7 @@ import java.util.List;
  * 描述:
  * 使用递归解决迷宫问题
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-08-31 15:23
  */
 public class Puzzle {

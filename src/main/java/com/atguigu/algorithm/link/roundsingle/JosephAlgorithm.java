@@ -4,7 +4,7 @@ package com.atguigu.algorithm.link.roundsingle;
  * 描述:
  * 使用环形单向链表 解决 ：约瑟夫算法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-07-21 9:20
  */
 public class JosephAlgorithm {

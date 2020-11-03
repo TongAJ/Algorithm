@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 描述:
  * 插入排序法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-04 9:49
  */
 public class InsertSort implements MySort{

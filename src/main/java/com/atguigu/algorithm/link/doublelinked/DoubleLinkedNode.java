@@ -5,7 +5,7 @@ package com.atguigu.algorithm.link.doublelinked;
  * 节点
  *
  * @create 2020-06-01 11:55
- * @author tongaijie
+ * @author tong-aj
  */
 public class DoubleLinkedNode {
     private int id;

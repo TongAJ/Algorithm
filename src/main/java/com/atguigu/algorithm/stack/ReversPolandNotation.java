@@ -11,7 +11,7 @@ import java.util.Stack;
  * 描述:
  * 逆波兰表达式解决计算起问题
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-08-28 14:29
  */
 public class ReversPolandNotation {

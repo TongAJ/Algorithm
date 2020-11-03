@@ -4,7 +4,7 @@ package com.atguigu.algorithm.link.roundsingle;
  * 描述:
  * 回忆约瑟夫算法
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-08-20 14:07
  */
 public class JosephTest {

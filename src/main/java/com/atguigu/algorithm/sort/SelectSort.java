@@ -8,7 +8,7 @@ import java.util.Arrays;
  * 描述:
  * 选择排序
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-09-03 15:33
  */
 public class SelectSort implements MySort{

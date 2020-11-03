@@ -4,7 +4,7 @@ package com.self.algorithm.recursion;
  * 描述:
  * 自己编写使用递归来解决迷宫问题
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * create 2020-09-11 13:28
  */
 public class MyPuzzle {

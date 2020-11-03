@@ -4,7 +4,7 @@ package com.atguigu.algorithm.link.roundsingle;
  * 描述:
  * 单向环形链表单个节点
  *
- * @author tongaijie-9697
+ * @author tong-aj
  * @create 2020-07-20 14:04
  */
 public class RoundLinkedNode{
