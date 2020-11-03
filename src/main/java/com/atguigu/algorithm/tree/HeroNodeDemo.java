@@ -1,5 +1,6 @@
 package com.atguigu.algorithm.tree;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
 
@@ -44,6 +45,7 @@ public class HeroNodeDemo {
         System.out.println();
 
 
+        heroNodeTree.removeNode(2);
         heroNodeTree.removeNode(4);
         if (heroNodeTree.getRoot() != null) {
             heroNodeTree.prefix();
@@ -270,14 +272,10 @@ class HeroNode {
 }
 
 @Data
+@AllArgsConstructor
 class HeroNodeTree {
 
     private HeroNode root;
-
-    public HeroNodeTree(HeroNode root) {
-        this.root = root;
-    }
-
     /**
      * Description: 二叉树前序遍历
      * Param: []
