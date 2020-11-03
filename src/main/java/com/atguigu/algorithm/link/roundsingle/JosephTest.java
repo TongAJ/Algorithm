@@ -5,7 +5,7 @@ package com.atguigu.algorithm.link.roundsingle;
  * 回忆约瑟夫算法
  *
  * @author tong-aj
- * @create 2020-08-20 14:07
+ * create 2020-08-20 14:07
  */
 public class JosephTest {
 
@@ -32,7 +32,7 @@ public class JosephTest {
     /**
      * 往队列中添加指定数量的环形节点
      *
-     * @param number
+     * param number
      */
     public static void addNumberToQueue(int number) {
         head = new RoundLinkedNode(1);
@@ -71,9 +71,9 @@ public class JosephTest {
     /**
      * 约瑟夫算法：根据下面三个参数，数数，数到的人出队列，直到所有人都出队列
      *
-     * @param number 一共多少人
-     * @param count  数多少次出一个人
-     * @param start  从哪一位开始
+     * param number 一共多少人
+     * param count  数多少次出一个人
+     * param start  从哪一位开始
      */
     public static void countAndOut(int number, int count, int start) {
         // 1:添加队列数量

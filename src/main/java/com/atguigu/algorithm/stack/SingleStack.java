@@ -1,5 +1,7 @@
 package com.atguigu.algorithm.stack;
 
+import lombok.Data;
+
 import java.util.Arrays;
 
 /**
@@ -7,37 +9,14 @@ import java.util.Arrays;
  * 数组模拟栈
  *
  * @author tong-aj
- * @create 2020-07-21 14:07
+ * create 2020-07-21 14:07
  */
+@Data
 public class SingleStack {
 
     private int[] stack;
     private int maxSize;
     private int top;
-
-    public int[] getStack() {
-        return stack;
-    }
-
-    public void setStack(int[] stack) {
-        this.stack = stack;
-    }
-
-    public int getMaxSize() {
-        return maxSize;
-    }
-
-    public void setMaxSize(int maxSize) {
-        this.maxSize = maxSize;
-    }
-
-    public int getTop() {
-        return top;
-    }
-
-    public void setTop(int top) {
-        this.top = top;
-    }
 
     @Override
     public String toString() {

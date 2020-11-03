@@ -12,7 +12,7 @@ import java.util.Map;
  * 计算所使用的栈
  *
  * @author tong-aj
- * @create 2020-07-21 15:27
+ * create 2020-07-21 15:27
  */
 public class CalculatorStack {
     private String[] stack;
@@ -60,7 +60,7 @@ public class CalculatorStack {
     /**
      * 构造栈
      *
-     * @param maxSize
+     * param maxSize
      */
     public CalculatorStack(int maxSize) {
         this.maxSize = maxSize;
@@ -71,7 +71,7 @@ public class CalculatorStack {
     /**
      * 栈是否满
      *
-     * @return
+     * return
      */
     public boolean isFull() {
         return top == this.maxSize - 1;
@@ -80,7 +80,7 @@ public class CalculatorStack {
     /**
      * 栈是否为空
      *
-     * @return
+     * return
      */
     public boolean isEmpty() {
         return top == -1;
@@ -98,7 +98,7 @@ public class CalculatorStack {
     /**
      * 入栈
      *
-     * @param value
+     * param value
      */
     public void push(String value) {
         if (isFull()) {
@@ -111,7 +111,7 @@ public class CalculatorStack {
     /**
      * 出栈
      *
-     * @return
+     * return
      */
     public String pop() {
         if (isEmpty()) {
@@ -126,7 +126,7 @@ public class CalculatorStack {
     /**
      * 查看栈顶数据
      *
-     * @return
+     * return
      */
     public String peek() {
         if (isEmpty()) {
@@ -140,8 +140,8 @@ public class CalculatorStack {
      * 乘法和除法：1
      * 加法和减法：0
      *
-     * @param operator
-     * @return
+     * param operator
+     * return
      */
     public static int priority(String operator) {
         if (operator.equals(MULTI) || operator.equals(DIVIDE)) {
@@ -156,8 +156,8 @@ public class CalculatorStack {
     /**
      * 判断是否是操作符
      *
-     * @param operator
-     * @return
+     * param operator
+     * return
      */
     public static boolean isOperator(String operator) {
         return operator.equals(ADD) || operator.equals(MINUS) || operator.equals(MULTI) || operator.equals(DIVIDE);
@@ -166,10 +166,10 @@ public class CalculatorStack {
     /**
      * 根据操作符，进行两个数之间的操作
      *
-     * @param number1
-     * @param number2
-     * @param operator
-     * @return
+     * param number1
+     * param number2
+     * param operator
+     * return
      */
     public static int calculate(int number1, int number2, String operator) {
         switch (operator) {
@@ -189,8 +189,8 @@ public class CalculatorStack {
     /**
      * 根据表达式，进行计算，返回结果
      *
-     * @param expression
-     * @return
+     * param expression
+     * return
      */
     public static int calculateResult(String expression) {
         // 1:定义数栈
@@ -272,8 +272,8 @@ public class CalculatorStack {
     /**
      * 将数栈pop出栈顶两个数，将操作符栈pop出栈顶的操作符，进行运算，并将结果push到数栈
      *
-     * @param numberStack
-     * @param operatorStack
+     * param numberStack
+     * param operatorStack
      */
     private static void popNumberAndOperate(CalculatorStack numberStack, CalculatorStack operatorStack) {
         int number1 = Integer.valueOf(numberStack.pop());

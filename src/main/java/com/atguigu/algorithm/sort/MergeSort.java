@@ -7,7 +7,7 @@ import java.util.Arrays;
  * 归并排序算法
  *
  * @author tong-aj
- * @create 2020-09-09 14:04
+ * create 2020-09-09 14:04
  */
 public class MergeSort {
 
@@ -19,12 +19,12 @@ public class MergeSort {
     /**
      * 合并的过程
      *
-     * @param arr   源数组
-     * @param left  左侧的下标位置
-     * @param mid   中间的下标位置
-     * @param right 右侧的下标位置
-     * @param temp  临时数组
-     * @return
+     * param arr   源数组
+     * param left  左侧的下标位置
+     * param mid   中间的下标位置
+     * param right 右侧的下标位置
+     * param temp  临时数组
+     * return
      */
     public static void mergeSort(int[] arr, int left, int mid, int right, int[] temp) {
         // 左侧起始下标
@@ -84,11 +84,11 @@ public class MergeSort {
     /**
      * 分+合并
      *
-     * @param arr
-     * @param l
-     * @param r
-     * @param temp
-     * @return
+     * param arr
+     * param l
+     * param r
+     * param temp
+     * return
      */
     public static int[] divideAndMerge(int[] arr, int l, int r, int[] temp) {
         if (l < r) {

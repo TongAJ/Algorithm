@@ -12,7 +12,7 @@ import java.util.Stack;
  * 逆波兰表达式解决计算起问题
  *
  * @author tong-aj
- * @create 2020-08-28 14:29
+ * create 2020-08-28 14:29
  */
 public class ReversPolandNotation {
 
@@ -36,8 +36,8 @@ public class ReversPolandNotation {
     /**
      * 将表达式转为中缀列表
      *
-     * @param expression
-     * @return
+     * param expression
+     * return
      */
     public static List<String> toInSuffixExpression(String expression) {
         List<String> strings = Arrays.asList(expression.split(" "));
@@ -47,8 +47,8 @@ public class ReversPolandNotation {
     /**
      * 将中缀表达式列表转为后缀表达式列表
      *
-     * @param expression
-     * @return
+     * param expression
+     * return
      */
     public static List<String> toSuffixExpression(List<String> expression) {
         // 准备一个栈和一个列表
@@ -96,8 +96,8 @@ public class ReversPolandNotation {
     /**
      * 接受逆波兰表达式数组
      *
-     * @param expression
-     * @return
+     * param expression
+     * return
      */
     public static int calculate(List<String> expression) {
         int result = 0;

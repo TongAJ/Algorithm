@@ -1,15 +1,12 @@
 package com.atguigu.algorithm.sort;
 
-import com.atguigu.algorithm.uitl.Util;
-
-import java.time.temporal.ValueRange;
 import java.util.Arrays;
 
 /**
  * 描述: 希尔排序算法（交换算法）
  *
  * @author tong-aj
- * @create 2020-09-07 15:32
+ * create 2020-09-07 15:32
  */
 public class ShellSort implements MySort {
 
@@ -19,8 +16,8 @@ public class ShellSort implements MySort {
     }
 
     /**
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
     public int[] sortExchange(int[] arr) {
         int temp;
@@ -42,8 +39,8 @@ public class ShellSort implements MySort {
     /**
      * 基于位移的 希尔算法
      *
-     * @param arr
-     * @return
+     * param arr
+     * return
      */
     @Override
     public int[] sort(int[] arr) {

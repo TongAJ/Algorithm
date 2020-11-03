@@ -6,7 +6,7 @@ import java.io.*;
  * 描述:
  * 稀疏数组
  *
- * @create 2020-05-29 21:57
+ * create 2020-05-29 21:57
  * @author tong-aj
  */
 public class SparseArray {
@@ -36,7 +36,7 @@ public class SparseArray {
 
     /**
      * 打印棋盘
-     * @param chess
+     * param chess
      */
     public static void printChess(int[][] chess){
         for (int[] row : chess){
