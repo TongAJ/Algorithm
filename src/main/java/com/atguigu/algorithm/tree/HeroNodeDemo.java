@@ -48,15 +48,14 @@ public class HeroNodeDemo {
         System.out.println(heroNodeTree.suffixSearch(5));
         System.out.println();
 
-
-/*        heroNodeTree.removeNode(2);
+        heroNodeTree.removeNode(2);
         heroNodeTree.removeNode(4);
         if (heroNodeTree.getRoot() != null) {
             heroNodeTree.prefix();
         } else {
             System.out.println("该二叉树已经为空树");
         }
-        System.out.println();*/
+        System.out.println();
 
         heroNodeTree.removeInRule(2);
         heroNodeTree.removeInRule(3);
@@ -65,9 +64,7 @@ public class HeroNodeDemo {
         } else {
             System.out.println("该二叉树已经为空树");
         }
-
     }
-
 }
 
 /**
@@ -339,8 +336,6 @@ class HeroNode {
             this.getRight().removeInRule(id);
         }
     }
-
-
 }
 
 @Data
