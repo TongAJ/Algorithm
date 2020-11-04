@@ -21,10 +21,12 @@ public class HeroNodeDemo {
         HeroNode heroNode4 = new HeroNode(4, "4");
         HeroNode heroNode5 = new HeroNode(5, "5");
         HeroNode heroNode6 = new HeroNode(6, "6");
+        HeroNode heroNode7 = new HeroNode(7, "7");
 
         heroNode1.setLeft(heroNode2);
         heroNode1.setRight(heroNode3);
-        heroNode2.setRight(heroNode6);
+        heroNode2.setLeft(heroNode6);
+        heroNode2.setRight(heroNode7);
         heroNode3.setLeft(heroNode5);
         heroNode3.setRight(heroNode4);
 
@@ -337,6 +339,8 @@ class HeroNode {
             this.getRight().removeInRule(id);
         }
     }
+
+
 }
 
 @Data
