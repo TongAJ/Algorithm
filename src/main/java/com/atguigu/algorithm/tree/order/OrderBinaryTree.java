@@ -40,13 +40,67 @@ public class OrderBinaryTree {
     }
 
     /**
+    * Description: 将线索化二叉树，按中序遍历的顺序打印出来
+    *          1
+    *      2       3
+    *  4      5  6
+    * 查询结果为：4，2，5，1，6，3
+    * Param: []
+    * return: void
+    * Author: tong-aj
+    * Date: 2020/11/5
+    */
+    public void threadedList(){
+
+        // 定义辅助节点，表示当前节点
+        HeroNode current = null;
+
+        if(root == null){
+            System.out.println("空树，无法展示");
+            return;
+        }
+
+        // 赋值current，从root开始遍历展示
+        current = root;
+
+        while(current != null){
+            // 向左寻找叶子节点
+            // 当 当前节点的 leftType 为0时，不停的遍历寻找，直到找到leftType =1 的叶子节点，
+            while(current.getLeftType() == 0){
+                current = current.getLeft();
+            }
+            // 就找到了root左侧子树最左下端的叶子节点，并打印该节点
+            System.out.println(current);
+            // 找到之后，开始向右找 rightType的线索化节点，找到一个输出一个
+            while(current.getRightType() == 1){
+                current = current.getRight();
+                System.out.println(current);
+            }
+            // 往右寻找
+            current = current.getRight();
+        }
+
+    }
+    
+    /**
+    * Description: 重载 线索化排序方法，默认传入节点为root
+    * Param: []
+    * return: void
+    * Author: tong-aj
+    * Date: 2020/11/5
+    */
+    public void threadedNodes(){
+        this.threadedNodes(root);
+    }
+
+    /**
      * Description: 以中序遍历为例子，线索化节点，对 left，right 指针为空的子节点进行线索化赋值前驱节点和后继节点
      * Param: [heroNode]
      * return: void
      * Author: tong-aj
      * Date: 2020/11/5
      */
-    public void threadedNodes(HeroNode heroNode) {
+    private void threadedNodes(HeroNode heroNode) {
         // 如果当前节点为空，则不能继续
         if (heroNode == null) {
             return;
@@ -97,12 +151,11 @@ public class OrderBinaryTree {
         heroNode2.setRight(heroNode5);
         heroNode3.setLeft(heroNode6);
 
-        orderBinaryTree.threadedNodes(heroNode1);
+        System.out.println("线索化二叉树");
+        orderBinaryTree.threadedNodes();
 
-        System.out.println(heroNode4.getRight());
-        System.out.println(heroNode6.getRight());
-        System.out.println(heroNode5.getLeft());
-        System.out.println(heroNode5.getRight());
+        System.out.println("中序遍历顺序打印线索化二叉树");
+        orderBinaryTree.threadedList();
     }
 }
 
@@ -113,8 +166,10 @@ class HeroNode {
     private Integer id;
     private String name;
     // 两个type，1 表示 线索化，0 表示正常节点
-    private Integer leftType;
-    private Integer rightType;
+    @ToString.Exclude
+    private Integer leftType = 0;
+    @ToString.Exclude
+    private Integer rightType = 0;
     @ToString.Exclude
     private HeroNode left;
     @ToString.Exclude
