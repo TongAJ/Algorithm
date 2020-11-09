@@ -118,7 +118,7 @@ public class OrderBinaryTree {
             heroNode.setLeftType(1);
         }
 
-        // 原本pre默认为null，当pre不为null时，表示heroNode往后走了一位
+        // 原本pre默认为null，当pre不为null时，表示heroNode开始移动
         // 即现在走到了节点2，那么节点2的pre为节点4
         if(pre != null && pre.getRight() == null){
             // 赋值后继节点
