@@ -30,6 +30,9 @@ public class OrderBinaryTree {
 
         System.out.println("线索化二叉树");
         orderBinaryTree.threadedNodes();
+
+        System.out.println("中序遍历顺序打印线索化二叉树");
+        orderBinaryTree.threadedList();
     }
 
     public OrderBinaryTree(HeroNode root) {
