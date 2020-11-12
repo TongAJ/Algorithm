@@ -33,10 +33,21 @@ public class HeapSort {
      * Date: 2020/11/10
      */
     public static void heapSort(int[] arr) {
-        // 构造大/小 顶堆数组
-        arr = adjustHeap(arr, 0, arr.length);
-        System.out.println(Arrays.toString(arr));
-
+        // 定义结果数组
+        int[] result = new int[arr.length];
+        // 找到数组中所有的非叶子节点
+        for (int i = arr.length/2-1; i >=0 ; i--) {
+            // 调整数组
+            result = adjustHeap(arr,i,arr.length);
+        }
+        // 循环将第一个数和最后一个数进行交替，然后移除最后一个数，进行堆排序
+        for (int i = arr.length-1; i >0 ; i--) {
+            int temp = arr[0];
+            arr[0] = arr[i];
+            arr[i] = temp;
+            adjustHeap(arr,0,i);
+        }
+        System.out.println(Arrays.toString(result));
     }
 
     /**
@@ -55,15 +66,15 @@ public class HeapSort {
             if (k + 1 < length && arr[k] < arr[k + 1]) {
                 k++; // 移动k
             }
-            // 如果较大子节点大于当前节点
+            // 如果较大子节点大于当前节点，则进行交换位置
             if(arr[k]>temp){
                 arr[index] = arr[k];
+                arr[k] = temp;
                 index = k;
             }else{
                 break;
             }
         }
-        arr[index] = temp;
         return arr;
     }
 
